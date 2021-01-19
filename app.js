@@ -51,6 +51,11 @@ const retrieveData = () => {
     
 }
 
+//const refresh = document.querySelector('.refresh');
+function refresh() {
+    location.reload();
+}
+
 btn.addEventListener('click', retrieveData);
 
 async function data() {

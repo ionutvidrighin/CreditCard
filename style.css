@@ -30,6 +30,16 @@ body {
     padding: 5px;
     color:rgb(85, 85, 85);
     text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.refresh:hover  {
+    background-color: rgba(49, 136, 250, 0.4);
+   /*color:rgb(255, 255, 255);*/
+    color:rgb(231, 225, 225);
+    position: relative;
+    top: 1px;
 }
 
 .db_content {
