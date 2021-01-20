@@ -47,7 +47,8 @@ const retrieveData = () => {
       .catch(function (error) {
         console.log(error);
       });
-
+    
+      swal("Success!", "Your payment was successful", "success");
     
 }
 
