@@ -29,7 +29,7 @@ const retrieveData = () => {
         return;
     }
 
-    if (!(securityCode.value.length === 3)){
+    if (!(securityCode.value.length === 4)){
         alert('Incorrect security code')
         return;
     }
@@ -42,13 +42,14 @@ const retrieveData = () => {
         securityCode: securityCode.value
       })
       .then(function (response) {
+        swal("Success!", "Your payment was successful", "success");
         console.log(response);
       })
       .catch(function (error) {
         console.log(error);
       });
     
-      swal("Success!", "Your payment was successful", "success");
+      
     
 }
 
