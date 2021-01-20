@@ -7,8 +7,9 @@ const expDate = document.querySelector('#exp_date');
 const securityCode = document.querySelector('#security_code');
 const btn = document.querySelector('button');
 
+btn.addEventListener('click', retrieveData);
 
-const retrieveData = () => {
+function retrieveData () {
     if (amount.value == '' || amount.value.includes('e')) {
         alert('Please enter amount to pay')
         return;
@@ -49,16 +50,17 @@ const retrieveData = () => {
         console.log(error);
       });
     
-      
-    
+      amount.value = '';
+      cardNo.value = ''; 
+      cardHolder.value = '';
+      expDate.value = '';
+      securityCode.value = '';
+      btn.removeEventListener('click', retrieveData);
 }
 
-//const refresh = document.querySelector('.refresh');
 function refresh() {
     location.reload();
 }
-
-btn.addEventListener('click', retrieveData);
 
 async function data() {
     let data =  await fetch('https://creditcardform.herokuapp.com/data');
