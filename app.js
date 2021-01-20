@@ -29,7 +29,7 @@ const retrieveData = () => {
         return;
     }
 
-    if (!(securityCode.value.length === 4)){
+    if (!(securityCode.value.length === 3)){
         alert('Incorrect security code')
         return;
     }
